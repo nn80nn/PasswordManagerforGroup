@@ -9,8 +9,9 @@ class Storage(path: String) {
         file = File(path)
     }
 
-    fun addPassword(password: String) {
+    fun addPassword(password: String): String {
         file.appendText(password + "\n")
+        return "Password added!"
     }
 
     fun removePassword(password: String): String {

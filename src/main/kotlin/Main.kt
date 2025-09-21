@@ -1,5 +1,6 @@
 package nvi.safe
 
 fun main() {
-    println("Hello World!")
+    val storage = Storage("passwords.txt")
+    storage.addPassword("qwerty123")
 }
