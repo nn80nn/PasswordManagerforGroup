@@ -9,11 +9,23 @@ class Storage(path: String) {
         file = File(path)
     }
 
+    /***
+     * Добавляет пароль в .txt файл
+     *
+     * @param password пароль
+     * @return строка об успехе/неуспехе
+     */
     fun addPassword(password: String): String {
         file.appendText(password + "\n")
         return "Password added!"
     }
 
+    /***
+     * Удаляет пароль из .txt файла
+     *
+     * @param password пароль для удаления
+     * @return строка об успехе/неуспехе
+     */
     fun removePassword(password: String): String {
         val passwords = file.readLines().toMutableList()
         if (passwords.remove(password)) {
