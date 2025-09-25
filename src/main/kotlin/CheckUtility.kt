@@ -53,7 +53,7 @@ class CheckUtility {
          *  @return средняя скорость подбора
          */
         fun checkAverageBruteforceTime(password: String, speed: Float, entropy: Double): Double {
-            return 2.0.pow(entropy) * 2 * speed
+            return 2.0.pow(entropy) / (2 * speed)
         }
     }
 }
