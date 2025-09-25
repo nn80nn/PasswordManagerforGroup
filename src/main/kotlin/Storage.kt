@@ -30,7 +30,7 @@ class Storage(path: String) {
         val passwords = file.readLines().toMutableList()
         if (passwords.remove(password)) {
             file.writeText(passwords.joinToString("\n") + "\n")
-            return "Password wrote"
+            return "Password removed"
         } else {
             return "Password not found"
         }
