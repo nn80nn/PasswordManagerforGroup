@@ -22,7 +22,7 @@ class CheckUtilityTest {
     }
 
     @Test
-    fun testCheckPasswordSrength() {
+    fun testCheckPasswordStrength() {
         val password1 = "qwerty123!"
         assertEquals("Password is bad!", CheckUtility.checkPasswordStrength(password1))
         val password2 = "Qwerty123!@"
