@@ -1,10 +1,8 @@
 package nvi.test
 
-import SecureStorage
+import nvi.safe.SecureStorage
 import org.junit.jupiter.api.*
-import kotlin.test.assertEquals
-import kotlin.test.assertNotEquals
-import kotlin.test.assertTrue
+import org.junit.jupiter.api.Assertions.*
 
 class SecureStorageTest {
 

@@ -1,6 +1,5 @@
 package nvi.safe
 
-import SecureStorage
 import nvi.safe.PasswordGenerator.generateStrongPassword
 
 fun main() {

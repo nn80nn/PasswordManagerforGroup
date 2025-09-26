@@ -1,12 +1,10 @@
 package nvi.test
 
-import PasswordEntity
+import nvi.safe.PasswordEntity
 import nvi.safe.EnhancedStorage
 import org.junit.jupiter.api.*
+import org.junit.jupiter.api.Assertions.*
 import java.io.File
-import kotlin.test.assertEquals
-import kotlin.test.assertNull
-import kotlin.test.assertTrue
 
 class EnhancedStorageTest {
     private val testFilePath = "test_passwords.json"

@@ -2,7 +2,7 @@ package nvi.test
 
 import nvi.safe.PasswordGenerator
 import org.junit.jupiter.api.*
-import kotlin.test.assertTrue
+import org.junit.jupiter.api.Assertions.*
 
 class PasswordGeneratorTest {
 

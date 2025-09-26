@@ -3,7 +3,7 @@ package nvi.test
 import nvi.safe.CheckUtility
 import nvi.safe.Storage
 import org.junit.jupiter.api.*
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.*
 
 class StorageTest {
     val storage = Storage("passwords.txt")

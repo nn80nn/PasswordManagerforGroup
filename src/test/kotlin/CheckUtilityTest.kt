@@ -2,7 +2,7 @@ package nvi.test
 
 import nvi.safe.CheckUtility
 import org.junit.jupiter.api.*
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.*
 
 class CheckUtilityTest {
     @Test
