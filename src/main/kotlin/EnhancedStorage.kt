@@ -34,14 +34,14 @@ class EnhancedStorage(path: String) {
         val json = gson.toJson(passwords)
         file.writeText(json)
     }
-
+    // не трогать
     fun addPassword(password: PasswordEntity): String {
         val passwords = readPasswords()
         passwords.add(password)
         writePasswords(passwords)
         return "Password added!"
     }
-
+    // не трогать
     fun removePassword(urlName: String): String {
         val passwords = readPasswords()
         val removed = passwords.removeIf { it.UrlName == urlName }
@@ -53,7 +53,7 @@ class EnhancedStorage(path: String) {
         }
     }
 
-    fun getAllPasswords(): List<PasswordEntity> {  ///моё
+    fun getAllPasswords(): List<PasswordEntity> {
         return readPasswords()
     }
 

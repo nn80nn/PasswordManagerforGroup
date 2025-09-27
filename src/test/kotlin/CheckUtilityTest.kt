@@ -30,21 +30,21 @@ class CheckUtilityTest {
 
     }
 
-    @Test // Илья. Тест к функции 2
+    @Test
     fun testCheckPasswordLength() {
         // Пароль слишком длинный
         assertEquals("Пароль слишком длинный (максимум 64 символов)",
             CheckUtility.checkPasswordLength("a".repeat(100)))
     }
 
-    @Test // Илья. Тест к функции 3
+    @Test
     fun testCheckForSimplePatterns() {
         // Пароль содержит "abc"
         assertEquals("Пароль содержит очевидные комбинации",
             CheckUtility.checkForSimplePatterns("abcDEF123"))
     }
 
-    @Test // Илья. Тест к функции 4
+    @Test
     fun testAnalyzePasswordComposition() {
         val password = "Test123!"
         val composition = CheckUtility.analyzePasswordComposition(password)
