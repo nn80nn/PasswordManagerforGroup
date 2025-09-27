@@ -35,4 +35,24 @@ class Storage(path: String) {
             return "Password not found"
         }
     }
+
+    // Илья: Функция 1
+    /**
+     * Проверяет пароль на повторение в хранилище и возвращает понятное сообщение
+     *
+     * @param password пароль для проверки
+     * @return сообщение о результате проверки
+     */
+    fun checkPasswordUniqueness(password: String): String {
+        if (!file.exists()) {
+            return "Это уникальный пароль! (файл хранилища еще не создан)"
+        }
+
+        val passwords = file.readLines()
+        return if (passwords.contains(password)) {
+            "Внимание! Такой пароль уже существует в хранилище!"
+        } else {
+            "Это уникальный пароль!"
+        }
+    }
 }

@@ -6,6 +6,49 @@ import kotlin.math.pow
 class CheckUtility {
     companion object {
 
+        // Илья. Функция 2
+        /**
+         * Проверяет длину пароля и возвращает понятное сообщение
+         */
+        fun checkPasswordLength(password: String, minLength: Int = 8, maxLength: Int = 64): String {
+            return when {
+                password.length < minLength -> "Пароль слишком короткий (минимум $minLength символов)"
+                password.length > maxLength -> "Пароль слишком длинный (максимум $maxLength символов)"
+                else -> "Длина пароля корректна"
+            }
+        }
+
+        // Илья. Функция 3
+        /**
+         * Проверяет пароль на наличие простых комбинаций и возвращает сообщение
+         */
+        fun checkForSimplePatterns(password: String): String {
+            val simplePatterns = listOf("123", "000", "111", "abc", "qwerty", "password")
+
+            return if (simplePatterns.any { password.contains(it, ignoreCase = true) }) {
+                "Пароль содержит очевидные комбинации"
+            } else {
+                "Пароль не содержит очевидных комбинаций"
+            }
+        }
+
+        // Илья. Функция 4
+        /**
+         * Анализирует пароль и возвращает количество символов каждого типа
+         *
+         * @param password пароль для анализа
+         * @return Map с количеством символов по типам
+         */
+        fun analyzePasswordComposition(password: String): Map<String, Int> {
+            return mapOf(
+                "строчные_буквы" to password.count { it.isLowerCase() },
+                "заглавные_буквы" to password.count { it.isUpperCase() },
+                "цифры" to password.count { it.isDigit() },
+                "спецсимволы" to password.count { !it.isLetterOrDigit() },
+                "всего_символов" to password.length
+            )
+        }
+
         /***
          * Проверяет пароль на соответствие всем необходмым требованиям (наличие заглавных букв, цифр, спецсимволов)
          *

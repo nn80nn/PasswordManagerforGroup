@@ -53,7 +53,7 @@ class EnhancedStorage(path: String) {
         }
     }
 
-    fun getAllPasswords(): List<PasswordEntity> {
+    fun getAllPasswords(): List<PasswordEntity> {  ///моё
         return readPasswords()
     }
 

@@ -21,4 +21,17 @@ class StorageTest {
         val flag2 = storage.removePassword("blablabla")
         assertEquals("Password not found", flag2)
     }
+
+    @Test // Илья. Тест к функции 1
+    fun testCheckPasswordUniqueness() {
+        // Очищаем файл перед тестом
+        if (storage.file.exists()) {
+            storage.file.delete()
+        }
+
+        // Добавляем пароль и проверяем уникальность нового пароля
+        storage.addPassword("existingPass")
+        val result2 = storage.checkPasswordUniqueness("newUniquePass")
+        assertEquals("Это уникальный пароль!", result2)
+    }
 }
